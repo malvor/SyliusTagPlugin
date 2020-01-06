@@ -1,0 +1,23 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block title %}{{ 'websnacks_sylius_tag_plugin.ui.tags'|trans }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <div class="ui breadcrumb">
+        <a href="{{ path('sylius_shop_homepage') }}" class="section">{{ 'sylius.ui.home'|trans }}</a>
+        <div class="divider"> / </div>
+        <div class="active section">
+            {{ 'websnacks_sylius_tag_plugin.ui.tags'|trans }}
+        </div>
+    </div>
+
+    <h1 class="ui monster section dividing header">
+        {{ 'websnacks_sylius_tag_plugin.ui.tags'|trans }}
+    </h1>
+
+    <div class="ui grid">
+        <div class="doubling six column row" id="websnacks-tags">
+            {% include '@WebsnacksSyliusTagPlugin/Shop/Tag/_tag.html.twig' with {'tags': tags} only %}
+        </div>
+    </div>
+{% endblock %}

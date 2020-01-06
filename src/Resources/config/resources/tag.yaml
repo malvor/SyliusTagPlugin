@@ -1,0 +1,19 @@
+sylius_resource:
+    resources:
+        websnacks_sylius_tag_plugin.tag:
+            driver: doctrine/orm
+            classes:
+                model: Websnacks\SyliusTagPlugin\Entity\Tag
+                interface: Websnacks\SyliusTagPlugin\Entity\TagInterface
+      #          form: Websnacks\SyliusTagPlugin\Form\Type\TagType
+                repository: Websnacks\SyliusTagPlugin\Repository\TagRepository
+                controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
+                factory: Sylius\Component\Resource\Factory\Factory
+            translation:
+                classes:
+                    model: Websnacks\SyliusTagPlugin\Entity\TagTranslation
+                    interface: Websnacks\SyliusTagPlugin\Entity\TagTranslationInterface
+      #              form: Websnacks\SyliusTagPlugin\Form\Type\TagTranslationType
+                    repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository
+                    controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
+                    factory: Sylius\Component\Resource\Factory\Factory

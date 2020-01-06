@@ -1,0 +1,6 @@
+websnacks_sylius_tag_plugin:
+  ui:
+    tags: 'Tags'
+  menu:
+    admin:
+      tags: 'Tags'

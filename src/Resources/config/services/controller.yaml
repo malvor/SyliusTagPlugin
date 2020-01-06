@@ -1,0 +1,6 @@
+services:
+  websnacks_sylius_tag_plugin.controller.tag_slug:
+    class: Websnacks\SyliusTagPlugin\Controller\TagSlugController
+    public: true
+    arguments:
+      - '@sylius.generator.slug'

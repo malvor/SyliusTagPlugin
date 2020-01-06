@@ -1,0 +1,4 @@
+# Put your Behat suites definitions here
+imports:
+    - suites/ui/mapping_tags.yaml
+#    - suites/ui/shop_tags.yaml

@@ -1,0 +1,2 @@
+websnacks_sylius_tag_plugin_shop_tag:
+    resource: shop/tag.yaml

@@ -1,0 +1,11 @@
+services:
+  websnacks_sylius_tag_plugin.fixture.tag:
+    class: Websnacks\SyliusTagPlugin\Fixture\TagFixture
+    arguments:
+    - '@websnacks_sylius_tag_plugin.manager.tag'
+    - '@websnacks_sylius_tag_plugin.factory.tag'
+    - '@websnacks_sylius_tag_plugin.repository.tag'
+    - '@sylius.repository.channel'
+    - '@sylius.repository.locale'
+    tags:
+    - { name: sylius_fixtures.fixture }

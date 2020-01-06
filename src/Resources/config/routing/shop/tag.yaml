@@ -1,0 +1,11 @@
+websnacks_sylius_tag_plugin_shop_tag_index:
+    path: /
+    methods: [GET]
+    defaults:
+        _controller: websnacks_sylius_tag_plugin.controller.tag:indexAction
+        _sylius:
+            template: '@WebsnacksSyliusTagPlugin/Shop/Tag/index.html.twig'
+            repository:
+                method: findByChannel
+                arguments:
+                - "expr:service('sylius.context.channel').getChannel()"

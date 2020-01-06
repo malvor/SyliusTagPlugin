@@ -1,0 +1,17 @@
+parameters:
+  websnacks_sylius_tag_plugin.model.tag.class: 'Websnacks\SyliusTagPlugin\Entity\Tag'
+services:
+  websnacks_sylius_tag_plugin.event_listener.admin.menu_builder:
+    class: Websnacks\SyliusTagPlugin\Menu\AdminMenuListener
+    tags:
+    - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+  websnacks_sylius_tag_plugin.event_listener.tag_aware_listener:
+    class: Websnacks\SyliusTagPlugin\Mapping\TagAwareListener
+    arguments:
+    - '@sylius.resource_registry'
+    - '%websnacks_sylius_tag_plugin.model.tag.class%'
+    - '%sylius.model.product.class%'
+    - '%sylius.model.channel.class%'
+    tags:
+    - { name: doctrine.event_subscriber, connection: default, priority: 99 }

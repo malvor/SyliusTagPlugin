@@ -1,0 +1,41 @@
+services:
+#  websnacks_sylius_tag_plugin.context.setup.tag:
+#    class: Tests\Websnacks\SyliusTagPlugin\Behat\Context\Setup\TagContext
+#    public: true
+#    arguments:
+#    - '@sylius.behat.shared_storage'
+#    - '@websnacks_sylius_tag_plugin.factory.tag'
+#    - '@websnacks_sylius_tag_plugin.repository.tag'
+#    - '@sylius.repository.product'
+#    - '@websnacks_sylius_tag_plugin.manager.tag'
+#    tags:
+#    - { name: fob.context_service }
+#
+#  odiseo_sylius_vendor_plugin.context.transform.vendor:
+#    class: Tests\Odiseo\SyliusVendorPlugin\Behat\Context\Transform\VendorContext
+#    public: true
+#    arguments:
+#    - '@odiseo_sylius_vendor_plugin.repository.vendor'
+#    tags:
+#    - { name: fob.context_service }
+#
+#  odiseo_sylius_vendor_plugin.context.ui.admin.managing_vendors:
+#    class: Tests\Odiseo\SyliusVendorPlugin\Behat\Context\Ui\Admin\ManagingVendorsContext
+#    public: true
+#    arguments:
+#    - "@sylius.behat.current_page_resolver"
+#    - "@sylius.behat.notification_checker"
+#    - '@odiseo_sylius_vendor_plugin.page.admin.vendor.index_page'
+#    - '@odiseo_sylius_vendor_plugin.page.admin.vendor.create_page'
+#    - '@odiseo_sylius_vendor_plugin.page.admin.vendor.update_page'
+#    tags:
+#    - { name: fob.context_service }
+#
+#  odiseo_sylius_vendor_plugin.context.ui.shop.vendor:
+#    class: Tests\Odiseo\SyliusVendorPlugin\Behat\Context\Ui\Shop\VendorContext
+#    public: true
+#    arguments:
+#    - '@odiseo_sylius_vendor_plugin.page.shop.vendor.index_page'
+#    - '@odiseo_sylius_vendor_plugin.page.shop.vendor.show_page'
+#    tags:
+#    - { name: fob.context_service }
