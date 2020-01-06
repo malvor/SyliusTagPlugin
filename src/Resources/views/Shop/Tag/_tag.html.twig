@@ -1,6 +1,6 @@
 {% for tag in tags %}
     <div class="column center aligned brand">
-        <a href="" class="ui card">
+        <a href="{{ path('websnacks_sylius_tag_plugin_shop_tag_show', {'slug': tag.slug}) }}" class="ui card">
             <div class="content">
                 <div class="description">{{ tag.name }}</div>
             </div>

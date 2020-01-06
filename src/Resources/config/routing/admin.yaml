@@ -1,0 +1,2 @@
+websnacks_sylius_tag_plugin_admin_tag:
+  resource: admin/tag.yaml

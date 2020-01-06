@@ -1,0 +1,16 @@
+websnacks_sylius_tag_plugin_admin_tag:
+  resource: |
+    alias: websnacks_sylius_tag_plugin.tag
+    section: admin
+    templates: SyliusAdminBundle:Crud
+    except: ['show']
+    redirect: index
+    grid: websnacks_sylius_tag_plugin_tag
+    permission: true
+    vars:
+        all:
+            templates:
+                form: '@WebsnacksSyliustagPlugin/Admin/tag/_form.html.twig'
+        index:
+            icon: trademark
+  type: sylius.resource

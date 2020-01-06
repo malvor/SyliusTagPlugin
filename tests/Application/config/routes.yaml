@@ -4,6 +4,6 @@ Websnacks_sylius_example_shop:
     requirements:
         _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
 
-#Websnacks_sylius_example_admin:
-#    resource: "@WebsnacksSyliusTagPlugin/Resources/config/route/admin.yml"
-#    prefix: /admin
+Websnacks_sylius_example_admin:
+    resource: "@WebsnacksSyliusTagPlugin/Resources/config/routing/admin.yaml"
+    prefix: /admin

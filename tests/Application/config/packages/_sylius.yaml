@@ -17,7 +17,7 @@ sylius_shop:
 
 sylius_fixtures:
     suites:
-        tag:
+        default:
             fixtures:
                 tag:
                     options:

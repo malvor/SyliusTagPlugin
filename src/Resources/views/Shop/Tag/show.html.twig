@@ -1,0 +1,38 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block title %}{{ tag.name }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <div class="ui breadcrumb">
+        <a href="{{ path('sylius_shop_homepage') }}" class="section">{{ 'sylius.ui.home'|trans }}</a>
+        <div class="divider"> / </div>
+        <a href="{{ path('websnacks_sylius_tag_plugin_shop_tag_index') }}" class="section">
+            {{ 'websnacks_sylius_tag_plugin.ui.tags'|trans }}
+        </a>
+        <div class="divider"> / </div>
+        <div class="active section">
+            {{ tag.name }}
+        </div>
+    </div>
+
+    <div class="ui hidden divider"></div>
+
+    <div class="ui stackable grid">
+        <div class="sixteen wide tablet seven wide computer column">
+            <div class="ui brandInfo">
+                                <h1 class="ui header">
+                    <span class="websnacks-tag-name">{{ tag.name }}</span>
+                </h1>
+            </div>
+        </div>
+        <div class="sixteen wide tablet nine wide computer column">
+            <div class="two column stretched ui grid">
+                {% for product in tag.products %}
+                    <div class="column">
+                        {% include '@SyliusShop/Product/_box.html.twig' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
