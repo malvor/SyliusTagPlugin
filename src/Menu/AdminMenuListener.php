@@ -18,7 +18,7 @@ final class AdminMenuListener
             $item = $menu;
         }
 
-        $item->addChild('vendors', ['route' => 'websnacks_sylius_tag_plugin_admin_tag'])
+        $item->addChild('tags', ['route' => 'websnacks_sylius_tag_plugin_admin_tag_index'])
             ->setLabel('websnacks_sylius_tag_plugin.menu.admin.tags')
             ->setLabelAttribute('icon', 'tag');
     }

@@ -5,7 +5,7 @@ sylius_resource:
             classes:
                 model: Websnacks\SyliusTagPlugin\Entity\Tag
                 interface: Websnacks\SyliusTagPlugin\Entity\TagInterface
-      #          form: Websnacks\SyliusTagPlugin\Form\Type\TagType
+                form: Websnacks\SyliusTagPlugin\Form\Type\TagType
                 repository: Websnacks\SyliusTagPlugin\Repository\TagRepository
                 controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
                 factory: Sylius\Component\Resource\Factory\Factory
@@ -13,7 +13,7 @@ sylius_resource:
                 classes:
                     model: Websnacks\SyliusTagPlugin\Entity\TagTranslation
                     interface: Websnacks\SyliusTagPlugin\Entity\TagTranslationInterface
-      #              form: Websnacks\SyliusTagPlugin\Form\Type\TagTranslationType
+                    form: Websnacks\SyliusTagPlugin\Form\Type\TagTranslationType
                     repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository
                     controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
                     factory: Sylius\Component\Resource\Factory\Factory

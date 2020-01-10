@@ -10,7 +10,7 @@ websnacks_sylius_tag_plugin_admin_tag:
     vars:
         all:
             templates:
-                form: '@WebsnacksSyliustagPlugin/Admin/tag/_form.html.twig'
+                form: '@WebsnacksSyliusTagPlugin/Admin/Tag/_form.html.twig'
         index:
             icon: trademark
   type: sylius.resource

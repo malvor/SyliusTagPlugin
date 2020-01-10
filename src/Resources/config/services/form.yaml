@@ -1,0 +1,21 @@
+services:
+  websnacks_sylius_tag_plugin.form.type.tag:
+    class: Websnacks\SyliusTagPlugin\Form\Type\TagType
+    arguments:
+    - '%websnacks_sylius_tag_plugin.model.tag.class%'
+    - ['websnacks']
+    tags:
+    - { name: form.type, alias: websnacks_sylius_tag }
+
+  websnacks_sylius_tag_plugin.form.type.tag_translation:
+    class: Websnacks\SyliusTagPlugin\Form\Type\TagTranslationType
+    arguments:
+    - '%websnacks_sylius_tag_plugin.model.tag_translation.class%'
+    - ['odiseo']
+    tags:
+    - { name: form.type, alias: websnacks_sylius_tag_translation }
+
+  odiseo_sylius_vendor_plugin.form.extension.type.product:
+      class: Websnacks\SyliusTagPlugin\Form\Extension\ProductTypeExtension
+      tags:
+      - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductType }

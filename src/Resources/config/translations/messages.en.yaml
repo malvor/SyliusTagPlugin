@@ -1,6 +1,11 @@
 websnacks_sylius_tag_plugin:
-  ui:
-    tags: 'Tags'
-  menu:
-    admin:
-      tags: 'Tags'
+    ui:
+        tags: 'Tags'
+    menu:
+        admin:
+            tags: 'Tags'
+    form:
+        tag:
+            slug: 'Slug'
+            name: 'Tag name'
+            channels: 'Channels'

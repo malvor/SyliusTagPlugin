@@ -22,3 +22,15 @@ sylius_fixtures:
                 tag:
                     options:
                         tags_per_channel: 12
+
+sylius_channel:
+    resources:
+        channel:
+            classes:
+                model: Tests\Websnacks\SyliusTagPlugin\Application\Entity\Channel
+
+sylius_product:
+    resources:
+        product:
+            classes:
+                model: Tests\Websnacks\SyliusTagPlugin\Application\Entity\Product

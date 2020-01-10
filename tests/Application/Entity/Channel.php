@@ -1,9 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Odiseo\SyliusVendorPlugin\Application\Entity;
+namespace Tests\Websnacks\SyliusTagPlugin\Application\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Core\Model\Channel as BaseChannel;
 use Websnacks\SyliusTagPlugin\Entity\TagsAwareInterface;
