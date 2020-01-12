@@ -19,6 +19,7 @@ final class TagSlugController extends AbstractController
     ) {
         $this->slugGenerator = $slugGenerator;
     }
+
     /**
      * @param Request $request
      * @return Response

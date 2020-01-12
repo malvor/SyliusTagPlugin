@@ -1,0 +1,8 @@
+{% if tags|length > 0 %}
+    <div class="websnacks-tag-list">
+        <h4>{{ 'websnacks_sylius_tag_plugin.ui.tags'|trans }}:</h4>
+        {% for tag in tags %}
+            <a href="{{ path('websnacks_sylius_tag_plugin_shop_tag_show', {'slug': tag.slug}) }}"><span class="ui teal label"><i class="tag icon"></i> {{ tag.name }}</span></a>
+        {% endfor %}
+    </div>
+{% endif %}
