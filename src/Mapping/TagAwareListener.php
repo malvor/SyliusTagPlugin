@@ -111,7 +111,7 @@ final class TagAwareListener implements EventSubscriber
         if (false === $metadata->hasAssociation('tags')) {
             $metadata->mapManyToMany([
                 'fieldName' => 'tags',
-                'targetEntity' => $tagMetadata->getClass('mode'),
+                'targetEntity' => $tagMetadata->getClass('model'),
                 'inversedBy' => $inversedBy,
                 'joinTable' => [
                     'name' => 'websnacks_tag_'.$inversedBy,
@@ -146,7 +146,7 @@ final class TagAwareListener implements EventSubscriber
             ];
             if (Product::class != $this->productClass) {
                 $productConfig = array_merge($productConfig, [
-                    'mappedBy' => 'tag',
+                    'mappedBy' => 'tags',
                 ]);
             }
             $metadata->mapOneToMany($productConfig);
@@ -158,7 +158,7 @@ final class TagAwareListener implements EventSubscriber
             ];
             if (Channel::class != $this->channelClass) {
                 $channelConfig = array_merge($channelConfig, [
-                    'mappedBy' => 'tag',
+                    'mappedBy' => 'tags',
                 ]);
             }
             $metadata->mapManyToMany($channelConfig);

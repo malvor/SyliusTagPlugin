@@ -17,25 +17,5 @@
         <field name="updatedAt" type="datetime" column="updated_at">
             <gedmo:timestampable on="update"/>
         </field>
-        <many-to-many field="channels" target-entity="Sylius\Component\Channel\Model\ChannelInterface">
-            <join-table name="websnacks_tag_channels">
-                <join-columns>
-                    <join-column name="tag_id" referenced-column-name="id" on-delete="CASCADE"/>
-                </join-columns>
-                <inverse-join-columns>
-                    <join-column name="channel_id" referenced-column-name="id"/>
-                </inverse-join-columns>
-            </join-table>
-        </many-to-many>
-        <many-to-many field="products" target-entity="Sylius\Component\Product\Model\ProductInterface">
-            <join-table name="websnacks_tag_products">
-                <join-columns>
-                    <join-column name="tag_id" referenced-column-name="id" on-delete="CASCADE"/>
-                </join-columns>
-                <inverse-join-columns>
-                    <join-column name="product_id" referenced-column-name="id"/>
-                </inverse-join-columns>
-            </join-table>
-        </many-to-many>
     </mapped-superclass>
 </doctrine-mapping>

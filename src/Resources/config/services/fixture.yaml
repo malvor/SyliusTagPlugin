@@ -7,5 +7,6 @@ services:
     - '@websnacks_sylius_tag_plugin.repository.tag'
     - '@sylius.repository.channel'
     - '@sylius.repository.locale'
+    - '@sylius.repository.product'
     tags:
     - { name: sylius_fixtures.fixture }
