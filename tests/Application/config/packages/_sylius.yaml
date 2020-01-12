@@ -17,10 +17,11 @@ sylius_shop:
 
 sylius_fixtures:
     suites:
-        default:
+        tags:
             fixtures:
                 tag:
                     options:
+                        tags_per_product: 3
                         tags_per_channel: 12
 
 sylius_channel:
@@ -28,7 +29,6 @@ sylius_channel:
         channel:
             classes:
                 model: Tests\Websnacks\SyliusTagPlugin\Application\Entity\Channel
-
 sylius_product:
     resources:
         product:
