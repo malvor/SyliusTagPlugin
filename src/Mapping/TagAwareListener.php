@@ -149,7 +149,7 @@ final class TagAwareListener implements EventSubscriber
                     'mappedBy' => 'tags',
                 ]);
             }
-            $metadata->mapOneToMany($productConfig);
+            $metadata->mapManyToMany($productConfig);
         }
         if (!$metadata->hasAssociation('channels')) {
             $channelConfig = [
